@@ -1,3 +1,4 @@
+from typing import List
 from abc import ABC, abstractmethod
 from constantes import TAMANHO_PADRAO_MAXIMO, TAMANHO_PADRAO_MINIMO
 
@@ -6,8 +7,8 @@ class FilaBase(ABC):
 
     def __init__(self) -> None:
         self.codigo: int = 0
-        self.fila = []
-        self.clientes_atendidos = []
+        self.fila: List[str] = []
+        self.clientes_atendidos: List[str] = []
         self.senha_atual: str = ""
 
     def reseta_fila(self) -> None:
