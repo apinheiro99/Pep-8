@@ -15,12 +15,16 @@ class FilaBase(ABC):
         else:
             self.codigo += 1
 
-    @abstractmethod
-    def gera_senha_atual(self) -> None:
-        pass
+    def __insere_cliente(self) -> None:
+        self.fila.append(self.senha_atual)
+
+    def atualiza_fila(self) -> None:
+        self.reseta_fila()
+        self.gera_senha_atual()
+        self.__insere_cliente()
 
     @abstractmethod
-    def atualiza_fila(self) -> None:
+    def gera_senha_atual(self) -> None:
         pass
 
     @abstractmethod
