@@ -2,7 +2,7 @@ from fila_base import FilaBase
 from constantes import CODIGO_NORMAL
 
 
-class filanormal(FilaBase):
+class FilaNormal(FilaBase):
 
     def gera_senha_atual(self) -> None:
         self.senhaatual = f"{CODIGO_NORMAL}{self.codigo}"
