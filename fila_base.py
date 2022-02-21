@@ -1,4 +1,4 @@
-from abc import ABC
+from abc import ABC, abstractmethod
 
 
 class FilaBase(ABC):
@@ -14,3 +14,15 @@ class FilaBase(ABC):
             self.codigo = 0
         else:
             self.codigo += 1
+
+    @abstractmethod
+    def gera_senha_atual(self) -> None:
+        pass
+
+    @abstractmethod
+    def atualiza_fila(self) -> None:
+        pass
+
+    @abstractmethod
+    def chama_cliente(self, caixa: int) -> str:
+        pass

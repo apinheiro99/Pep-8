@@ -6,11 +6,11 @@ import os
 os.system("clear")
 
 fila_teste = filanormal()
-fila_teste.atualizafila()
-fila_teste.atualizafila()
-fila_teste.atualizafila()
-print(fila_teste.chamacliente(12))
-print(fila_teste.chamacliente(5))
+fila_teste.atualiza_fila()
+fila_teste.atualiza_fila()
+fila_teste.atualiza_fila()
+print(fila_teste.chama_cliente(12))
+print(fila_teste.chama_cliente(5))
 
 fila_teste_2 = FilaPrioritaria()
 fila_teste_2.atualiza_fila()
